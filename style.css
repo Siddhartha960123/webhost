@@ -233,7 +233,7 @@ p a {
 }
 
 .container p {
-    color: whitesmoke;
+    color: white;
 }
 
 .header {
@@ -436,7 +436,7 @@ h2, h3 {
     padding: 10px 20px;
     font-size: 1em;
     color: rgb(0,206,209);
-    background-color: whitesmoke;
+    background-color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -576,7 +576,7 @@ h2, h3 {
 }
 
 .container p {
-    color: whitesmoke;
+    color: white;
 }
 
 .header {
@@ -721,7 +721,7 @@ h2, h3 {
     padding: 10px 20px;
     font-size: 1em;
     color: rgb(0,206,209);
-    background-color: whitesmoke;
+    background-color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
