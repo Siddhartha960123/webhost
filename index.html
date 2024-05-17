@@ -6,18 +6,22 @@
     <link rel="stylesheet" href="style.css">
     <title>Summarizer</title>
 
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <!-- Google Fonts -->
 
+
     <!-- Font Awesome Cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Font Awesome Cdn -->
 
+
 </head>
 <body>
+
 
 <nav class="navbar">
     <div class="logo">
@@ -30,7 +34,11 @@
         <a href="#contact">Contact</a>
         <div class="auth-buttons">
             <a href="#signin" id="signInButton">Sign In</a>
-            <a href="#signup">Sign Up</a>
+            <a href="#signup" id="signUpButton">Sign Up</a>
+        </div>
+        <!--Dark and light theme -->
+        <div class="theme-toggle">
+            <i id="themeToggleButton" class="fas fa-moon"></i>
         </div>
     </div>
 </nav>
@@ -41,31 +49,66 @@
         <div class="login-container">
             <form>
                 <h2>Login</h2>
-                <label for="username">Username</label>
+                <label for="username">Username
+                    <i class="fa-solid fa-circle-user" id="user-icon"></i>
+                </label>
                 <input type="text" id="username" name="username">
-                <label for="password">Password</label>
+                <label for="password">Password
+                    <i class="fa-solid fa-eye-slash" id="password-icon"></i>
+                </label>
                 <input type="password" id="password" name="password">
                 <button type="submit">Login</button>
             </form>
             <p>Don't have an account? <a href="#">Sign Up</a></p>
+            <div id="form-container"></div>
         </div>
         <div class="welcome-container">
             <h2>WELCOME BACK!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing</p>
-        </div>
-        <div id="signUpContainer" class="login-container" style="display: none;">
-            <form id="signUpForm">
-                <h2>Sign Up</h2>
-                <label for="newUsername">Username</label>
-                <input type="text" id="newUsername" name="newUsername" required>
-                <label for="newPassword">Password</label>
-                <input type="password" id="newPassword" name="newPassword" required>
-                <button type="submit">Register</button>
-            </form>
-            <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+            <p>Log in to enjoy uninterrupted session</p>
         </div>
     </div>
 </div>
+<!--Sign up form-->
+<!--Sign in form desc-->
+
+
+<div id="SignUpModal" class="modal1">
+    <div class="modal1-content">
+        <div class="signup-container">
+            <form>
+                <h2>Register</h2>
+                <label for="name">Name
+                    <i class="fa-solid fa-person" id="name-icon1"></i>
+                </label>
+                <input type="text" id="name" name="name">
+                <label for="username">Username
+                    <i class="fa-solid fa-circle-user" id="user-icon1"></i>
+                </label>
+                <input type="text" id="username" name="username">
+                <label for="email">Email
+                    <i class="fa-solid fa-envelope" id="email-icon1"></i>
+                </label>
+                <input type="email" id="email" name="email">
+                <label for="password">Password
+                    <i class="fa-solid fa-eye-slash" id="password-icon1"></i>
+                </label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#">Log in</a></p>
+            <div id="form-container"></div>
+        </div>
+        <div class="welcome1-container">
+            <h2>Start your journey!</h2>
+            <p>Register yourself to enjoy free services</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--Sign up form hidden -->
 <section class="objective">
     <div class="obj">Summarize any document</div>
     <p class="obj-1">in a click</p>
@@ -96,10 +139,13 @@
     </div>
     <button id="summarizeButton" class="summarize-button">SUMMARIZE THIS</button>
 
+
 </div>
 <hr>
 
+
 <!--Single platform endless summaries starts -->
+<button class="summary_button">Attain concise Understanding</button>
 <section id="summary">
 <h1>Single Platform, Endless Summaries</h1>
 <h2>Transforming information overload into manageable insights — consistently striving for clarity.</h2>
@@ -108,8 +154,8 @@
     <!-- Part 1 -->
     <div class="row">
         <div class="column-text">
-            <h3>Condense & Comprehend: Summarization Simplified</h3>
-            <h2>100% Automatic Article Summarization with just a click</h2>
+            <h3 id="sum">Condense & Comprehend: Summarization Simplified</h3>
+            <h2 id="sum">100% Automatic Article Summarization with just a click</h2>
             <p id="summary1">In the sheer amount of information that bombards Internet users from all sides, hardly anyone wants to devote their valuable time to reading long texts. TLDR This's clever AI analyzes any piece of text and summarizes it automatically, in a way that makes it easy for you to read, understand and act on.</p>
         </div>
         <div class="column-image">
@@ -122,9 +168,9 @@
             <img src="image2.webp" alt="Summarization Image 2">
         </div>
         <div class="column-text">
-            <h3>Essentials Unveiled: Metadata Extraction Simplified</h3>
-            <h2>Article Metadata Extraction</h2>
-            <p id="summary1">TLDR This, the online article summarizer tool, not only condenses lengthy articles into shorter, digestible content, but it also automatically extracts essential metadata such as author and date information, related images, and the title. Additionally, it estimates the reading time for news articles and blog posts, ensuring you have all the necessary information consolidated in one place for efficient reading.</p>
+            <h3 id="sum">Essentials Unveiled: Metadata Extraction Simplified</h3>
+            <h2 id="sum">Article Metadata Extraction</h2>
+            <p id="summary1">Summarizer This, the online article summarizer tool, not only condenses lengthy articles into shorter, digestible content, but it also automatically extracts essential metadata such as author and date information, related images, and the title. Additionally, it estimates the reading time for news articles and blog posts, ensuring you have all the necessary information consolidated in one place for efficient reading.</p>
             <ul>
                 <li>Automated author-date extraction</li>
                 <li>Related images consolidation</li>
@@ -135,9 +181,9 @@
     <!-- Part 3 -->
     <div class="row">
       <div class="column-text">
-        <h3>Pure Focus, No Fuss: Your Ad-Free Reading Haven</h3>
-        <h2>Distraction and ad-free reading</h2>
-        <p id="summary1">As an efficient article summarizer tool, TLDR This meticulously eliminates ads, popups, graphics, and other online distractions, providing you with a clean, uncluttered reading experience. Moreover, it enhances your focus and comprehension by presenting the essential content in a concise and straightforward manner, thus transforming the way you consume information online.</p>
+        <h3 id="sum">Pure Focus, No Fuss: Your Ad-Free Reading Haven</h3>
+        <h2 id="sum">Distraction and ad-free reading</h2>
+        <p id="summary1">As an efficient article summarizer tool, Summarizer This meticulously eliminates ads, popups, graphics, and other online distractions, providing you with a clean, uncluttered reading experience. Moreover, it enhances your focus and comprehension by presenting the essential content in a concise and straightforward manner, thus transforming the way you consume information online.</p>
       </div>
       <div class="column-image">
         <img src="image3.webp" alt="Summarization Image 3">
@@ -149,9 +195,9 @@
             <img src="image4.webp" alt="Summarization Image 4">
         </div>
         <div class="column-text">
-            <h3>Dodge the Distraction, Embrace the Essence</h3>
-            <h2>Avoid the Clickbait Trap</h2>
-            <p id="summary1">TLDR This smartly selects the most relevant points from a text, filtering out weak arguments and baseless speculation. It allows for quick comprehension of the essence, without needing to sift through all paragraphs. By focusing on core substance and disregarding fluff, it enhances efficiency in consuming information, freeing more time for valuable content.</p>
+            <h3 id="sum">Dodge the Distraction, Embrace the Essence</h3>
+            <h2 id="sum">Avoid the Clickbait Trap</h2>
+            <p id="summary1">Summarizer This smartly selects the most relevant points from a text, filtering out weak arguments and baseless speculation. It allows for quick comprehension of the essence, without needing to sift through all paragraphs. By focusing on core substance and disregarding fluff, it enhances efficiency in consuming information, freeing more time for valuable content.</p>
             <ul>
                 <li>Filters weak arguments and speculation</li>
                 <li>Highlights most relevant points</li>
@@ -163,45 +209,48 @@
 <!--Single platform endless summaries ends -->
 
 
+
 <!--Who can this use for starts-->
 <p id="purpose-obj">Who is Summarizer This for?</p>
 <p id="purpose-desc">Summarizer This is a summarizing tool designed for students, writers, teachers, institutions, <br>journalists, and any internet user who needs to quickly understand the essence of <br>lengthy content.</p>
 <section class="container1">
     <div class="item">
-        <a href="#"><img src="logo1.svg" alt="logo1"></a>
+        <a href="#"><img src="logo1.svg" alt="logo1" id="lg"></a>
         <h3>Anyone with access to the Internet</h2>
         <p>Summarizer This is for anyone who just needs to get the gist of a long article. You can read this summary, then go read the original article if you want to.</p>
     </div>
     <div class="item">
-        <a href="#"><img src="logo2.svg" alt="logo2"></a>
+        <a href="#"><img src="logo2.svg" alt="logo2" id="lg"></a>
         <h3>Students</h3>
         <p>Summarizer This is for students studying for exams, who are overwhelmed by information overload. This tool will help them summarize information into a concise, easy to digest piece of text.</p>
     </div>
     <div class="item">
-        <a href="#"><img src="logo3.svg" alt="logo3"></a>
+        <a href="#"><img src="logo3.svg" alt="logo3" id="lg"></a>
         <h3>Writers</h3>
         <p>Summarizer This is for anyone who writes frequently, and wants to quickly summarize their articles for easier writing and easier reading.</p>
     </div>
     </div>
     <div class="item">
-        <a href="#"><img src="logo4.svg" alt="logo4"></a>
+        <a href="#"><img src="logo4.svg" alt="logo4" id="lg"></a>
         <h3>Teachers</h3>
-        <p>TLDR This is for teachers who want to summarize a long document or chapter for their students.</p>
+        <p>Summarizer This is for teachers who want to summarize a long document or chapter for their students.</p>
     </div>
     <div class="item">
-        <a href="#"><img src="logo5.svg" alt="logo5"></a>
+        <a href="#"><img src="logo5.svg" alt="logo5" id="lg"></a>
         <h3>Institutions</h3>
         <p>Summarizer This is for corporations and institutions who want to condense a piece of content into a summary that is easy to digest for their employees/students.</p>
     </div>
     <div class="item">
-        <a href="#"><img src="logo6.svg" alt="logo6"></a>
+        <a href="#"><img src="logo6.svg" alt="logo6" id="lg"></a>
         <h3>Journalists</h3>
         <p>Summarizer This is for journalists who need to summarize a long article for their newspaper or magazine.</p>
     </div>
     </section>
 
+
 <script src="script.js"></script>
 <!--Who can this use for ends-->
+
 
 <!--Focus box section starts-->
 <section class="focus-box">
@@ -211,6 +260,7 @@
     </div>
 </section>
 <!--Focus box section ends here-->
+
 
 
 <!-- Footer Start -->
@@ -244,6 +294,7 @@
     </div>
 </footer>
 <!-- Footer End -->
+
 
 </body>
 </html>

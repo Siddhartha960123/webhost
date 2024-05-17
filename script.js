@@ -10,7 +10,23 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+
 /*Login form ends*/
+
+/*Sign Up form starts here*/
+
+document.getElementById('signUpButton').onclick = function() {
+    document.getElementById('SignUpModal').style.display = 'flex';
+}
+
+window.onclick = function(event) {
+    var modal1 = document.getElementById('SignUpModal');
+    if (event.target == modal1) {
+        modal1.style.display = 'none';
+    }
+}
+
+/*Sign up form ends here*/
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -81,5 +97,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     startSummarizingButton.addEventListener('click', function() {
         container.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+/*Dark and light theme*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleButton = document.getElementById('themeToggleButton');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        themeToggleButton.classList.remove('fa-moon');
+        themeToggleButton.classList.add('fa-sun');
+    }
+
+    themeToggleButton.addEventListener('click', function() {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggleButton.classList.remove('fa-moon');
+            themeToggleButton.classList.add('fa-sun');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            themeToggleButton.classList.remove('fa-sun');
+            themeToggleButton.classList.add('fa-moon');
+        }
     });
 });
